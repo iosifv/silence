@@ -1,4 +1,4 @@
-![alt text](https://raw.githubusercontent.com/iosifv/silence/master/silence.jpg)
+![alt text](https://raw.githubusercontent.com/iosifv/silence/master/shh.jpg)
 
 # silence - a tool for safely backing up your ssh keys
 
