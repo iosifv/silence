@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 echo ' => Decrypting vault...'
 gpg ssh-vault.tar.gz.gpg
 

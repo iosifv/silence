@@ -29,6 +29,7 @@ Enter one of the folders, then
 
 ## Todo:
 
+- Create better diagnostics info
 - Replicate current behaviour to save AWS credentials
 - Replicate current behaviour to save rClone credentials
 - Replicate current behaviour to save Lastpass credentials

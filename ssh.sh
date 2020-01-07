@@ -28,8 +28,16 @@ function display_output(){
 # Purpose - display current status of system
 #
 function show_ssh(){
-	ls ~/.ssh >$OUTPUT
-    display_output 6 60 "SSH"
+	echo "SSH files on system in ~/.ssh\n" >$OUTPUT
+	echo "=============================\n" >>$OUTPUT
+	ls -lis ~/.ssh >>$OUTPUT
+	echo "\n\n\nCurrent Encrypted files:\n" >>$OUTPUT
+	echo "============================\n" >>$OUTPUT
+	ls -l | grep ssh-vault.tar >>$OUTPUT
+	echo "\n\n\nCurrent Decrypted folder:\n" >>$OUTPUT
+	echo "=============================\n" >>$OUTPUT
+	ls -d */ | grep ssh-vault >>$OUTPUT
+    display_output 24 60 "Current Status"
 }
 
 #
@@ -37,15 +45,15 @@ function show_ssh(){
 #
 function run_backup(){
 	sh ./ssh/backup.sh >$OUTPUT
-	display_output 13 25 "Backup"
+	display_output 13 60 "Backup"
 }
 function run_unpack(){
 	sh ./ssh/unpack.sh >$OUTPUT
-	display_output 13 25 "Unpack"
+	display_output 13 60 "Unpack"
 }
 function run_overwrite(){
 	sh ./ssh/overwrite.sh >$OUTPUT
-	display_output 13 25 "Overwrite"
+	display_output 13 60 "Overwrite"
 }
 
 #
@@ -60,10 +68,11 @@ dialog --clear  --help-button --backtitle "Silence - a simple SSH manager" \
 --menu "You can use the UP/DOWN arrow keys, the first \n\
 letter of the choice as a hot key, or the \n\
 number keys 1-9 to choose an option.\n\
-Choose the TASK" 15 50 4 \
-backup "Run Backup" \
-unpack "Run Unpack" \
-overwrite "Run Overwrite" \
+Choose the TASK" 16 50 6 \
+Info "Show current status" \
+Backup "Run Backup" \
+Unpack "Run Unpack" \
+Overwrite "Run Overwrite" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
 menuitem=$(<"${INPUT}")
@@ -71,9 +80,10 @@ menuitem=$(<"${INPUT}")
 
 # make decsion 
 case $menuitem in
-	backup) run_backup;;
-	unpack) run_unpack;;
-	overwrite) run_overwrite;;
+	Info) show_ssh;;
+	Backup) run_backup;;
+	Unpack) run_unpack;;
+	Overwrite) run_overwrite;;
 	Exit) echo "Bye"; break;;
 esac
 

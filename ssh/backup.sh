@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 echo ' => Creating archive of ~/.ssh'
 tar cvzf ssh-vault.tar.gz -C ~/.ssh .
 
