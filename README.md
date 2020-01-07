@@ -1,3 +1,5 @@
+![alt text](https://raw.githubusercontent.com/iosifv/silence/master/silence.jpg)
+
 # silence - a tool for safely backing up your ssh keys
 
 Tool for safely backing up ssh keys in an git repository.
