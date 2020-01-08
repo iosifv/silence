@@ -10,24 +10,31 @@ The main idea of this is: to save a zipped and encrypted file on one of your **p
 ## Usage
 
 ##### Fork repo
-After forking this repository and making it private for your
+You need to fork this repository and keep it **private** in your git cloud provider (Github/Bitbucket/Github). Reason for this is that you will have to keep an encrypted copy of your ssh keys.
 
 ##### Generate Backup
 
 - run `./ssh/backup.sh`
 - or run the interactive menu `./ssh-menu.sh`
 
-This will create a file locally which will be encrypted
+This will create a file locally which will be encrypted. This file is stored at `./ssh-vault.tar.gz.gpg`
 
 ##### gitignore
 
-You will have to modify .gitignore so that you can save the generated encrypted file in git
+You will have to modify .gitignore so that you can save the generated encrypted file in your git cloud provider
 
 ##### Use the backup
-Enter one of the folders, then
 
 - run `./ssh/unpack.sh` && `./ssh/overwrite.sh`
 - or run the interactive menu `./ssh-menu.sh`
+
+Unpack will decrypt the `./ssh-vault.tar.gz.gpg` file and store it's contents uncrypted in the folder `./ssh-vault`
+
+After this, Overwrite will copy and overwrite the contents of `./ssh-vault` into `~/.ssh`
+
+After this, it's good practice to delete `./ssh-vault` folder
+
+Done! you're good to go.
 
 ## FAQ:
 
