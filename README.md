@@ -1,9 +1,11 @@
-![silence](https://raw.githubusercontent.com/iosifv/silence/master/shh.png)
+![silence](./shh.png)
 
 # silence - a tool for safely backing up your ssh keys
 
 Tool for safely backing up ssh keys in an git repository.
 The main idea of this is: to save a zipped and encrypted file on one of your **private** repositories
+
+![screenshot](./screenshot.png)
 
 ## Usage
 
@@ -13,7 +15,7 @@ After forking this repository and making it private for your
 ##### Generate Backup
 
 - run `./ssh/backup.sh`
-- or run the interactive menu `./ssh.sh`
+- or run the interactive menu `./ssh-menu.sh`
 
 This will create a file locally which will be encrypted
 
@@ -25,7 +27,7 @@ You will have to modify .gitignore so that you can save the generated encrypted 
 Enter one of the folders, then
 
 - run `./ssh/unpack.sh` && `./ssh/overwrite.sh`
-- or run the interactive menu `./ssh.sh`
+- or run the interactive menu `./ssh-menu.sh`
 
 ## FAQ:
 
