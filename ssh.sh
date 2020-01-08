@@ -68,11 +68,11 @@ dialog --clear  --help-button --backtitle "Silence - a simple SSH manager" \
 --menu "You can use the UP/DOWN arrow keys, the first \n\
 letter of the choice as a hot key, or the \n\
 number keys 1-9 to choose an option.\n\
-Choose the TASK" 16 50 6 \
+Choose the TASK" 16 60 6 \
 Info "Show current status" \
-Backup "Run Backup" \
-Unpack "Run Unpack" \
-Overwrite "Run Overwrite" \
+Backup "Create an encrypted backup of ~/.ssh" \
+Unpack "Decrypt backup in ./ssh-vault" \
+Overwrite "Overwrite ~/.ssh with decrypted backup" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
 menuitem=$(<"${INPUT}")
