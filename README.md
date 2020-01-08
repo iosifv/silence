@@ -30,7 +30,7 @@ You will have to modify .gitignore so that you can save the generated encrypted 
 
 Unpack will decrypt the `./ssh-vault.tar.gz.gpg` file and store it's contents uncrypted in the folder `./ssh-vault`
 
-After this, Overwrite will copy and overwrite the contents of `./ssh-vault` into `~/.ssh`
+Overwrite will copy and overwrite the contents of `./ssh-vault` into `~/.ssh`
 
 After this, it's good practice to delete `./ssh-vault` folder
 
