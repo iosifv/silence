@@ -71,7 +71,7 @@ number keys 1-9 to choose an option.\n\
 Choose the TASK" 16 60 6 \
 Info "Show current status" \
 Backup "Create an encrypted backup of ~/.ssh" \
-Unpack "Decrypt backup in ./ssh-vault" \
+Unpack "Decrypt backup to ./ssh-vault" \
 Overwrite "Overwrite ~/.ssh with decrypted backup" \
 Exit "Exit to the shell" 2>"${INPUT}"
 
