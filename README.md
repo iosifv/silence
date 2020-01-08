@@ -31,7 +31,7 @@ Enter one of the folders, then
 
 ## FAQ:
 
-**Q:** OMG! Are you serious, do you understand how bad it is to store ssh keys publicly?
+**Q:** OMG! Are you serious, do you understand how bad it is to store ssh keys online?
 
 **A:** Yes, I get it, it's bad practice, but I preffer this over the pain of setting up my keys on each new machine I use.
 ##
