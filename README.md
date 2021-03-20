@@ -11,7 +11,7 @@ The main idea of this is: to save a zipped and encrypted file on one of your **p
 
 #### Be brave, just try this online
 
-[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=iosifv%2Fsilence&cloudshell_git_branch=master&cloudshell_print=%2Fcloud-shell-readme.txt&cloudshell_tutorial=%2Ftutorial.md)
+[![Open in Cloud Shell](https://gstatic.com/cloudssh/images/open-btn.svg)](https://ssh.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fiosifv%2Fsilence&cloudshell_git_branch=master&cloudshell_print=%2Fcloud-shell-readme.txt&cloudshell_tutorial=%2Ftutorial.md)
 
 ##### Fork repo
 You need to fork this repository and keep it **private** in your git cloud provider (Github/Bitbucket/Github). Reason for this is that you will have to keep an encrypted copy of your ssh keys.
